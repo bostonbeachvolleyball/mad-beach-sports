@@ -15,41 +15,33 @@
 
     :root {
       --teal: #2c9c9c;
-      --dark-teal: #176b6b;
+      --dark: #173b3b;
       --sand: #f7f1e5;
       --cream: #fffdf8;
-      --navy: #173b3b;
       --orange: #ef8354;
       --light-teal: #dff3f1;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--navy);
+      color: var(--dark);
       background: var(--cream);
       line-height: 1.6;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 22px 6%;
+      padding: 20px 6%;
       background: var(--cream);
-      position: sticky;
-      top: 0;
-      z-index: 10;
       border-bottom: 1px solid #e8e1d5;
     }
 
@@ -63,7 +55,6 @@
     .nav-links {
       display: flex;
       gap: 28px;
-      font-size: 15px;
       font-weight: 700;
     }
 
@@ -76,7 +67,7 @@
     .hero {
       background: var(--teal);
       color: white;
-      padding: 110px 6% 100px;
+      padding: 100px 6%;
       text-align: center;
     }
 
@@ -89,7 +80,7 @@
     }
 
     .hero h1 {
-      font-size: clamp(58px, 10vw, 120px);
+      font-size: clamp(60px, 11vw, 120px);
       line-height: 0.9;
       letter-spacing: -6px;
       margin-bottom: 28px;
@@ -104,37 +95,31 @@
     .button {
       display: inline-block;
       background: white;
-      color: var(--dark-teal);
+      color: var(--dark);
       padding: 15px 25px;
       border-radius: 999px;
       font-weight: 800;
-      transition: transform 0.2s;
     }
 
-    .button:hover {
-      transform: translateY(-3px);
-    }
-
-    /* SECTIONS */
+    /* GENERAL SECTIONS */
 
     section {
-      padding: 85px 6%;
+      padding: 80px 6%;
     }
 
     .section-title {
       font-size: 42px;
       letter-spacing: -2px;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
 
     .section-intro {
       max-width: 650px;
       color: #557070;
-      margin-bottom: 35px;
       font-size: 18px;
     }
 
-    /* TOURNAMENT CARD */
+    /* FEATURED TOURNAMENT */
 
     .featured {
       background: var(--sand);
@@ -147,7 +132,7 @@
       max-width: 1100px;
       margin: 35px auto 0;
       display: grid;
-      grid-template-columns: 1.1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       box-shadow: 0 12px 40px rgba(23, 59, 59, 0.08);
     }
 
@@ -162,8 +147,13 @@
       text-align: center;
     }
 
+    .tournament-image .emoji {
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
+
     .tournament-image h3 {
-      font-size: 52px;
+      font-size: 50px;
       line-height: 1;
       letter-spacing: -3px;
     }
@@ -179,14 +169,13 @@
 
     .details {
       display: grid;
-      gap: 13px;
+      gap: 14px;
       margin: 25px 0;
     }
 
     .detail {
       display: flex;
       gap: 12px;
-      align-items: flex-start;
     }
 
     .detail-icon {
@@ -201,14 +190,14 @@
       padding: 15px 24px;
       border-radius: 999px;
       font-weight: 800;
-      margin-top: 10px;
+      margin-top: 20px;
     }
 
     /* FORMAT CARDS */
 
     .formats {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 24px;
       max-width: 1100px;
       margin: 35px auto 0;
@@ -220,22 +209,292 @@
       border-radius: 22px;
     }
 
+    .format-card .icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
     .format-card h3 {
       font-size: 30px;
       margin-bottom: 8px;
     }
 
-    .format-card p {
-      color: #466363;
-    }
-
     /* ABOUT */
 
     .about {
-      max-width: 850px;
+      max-width: 800px;
       margin: auto;
       text-align: center;
     }
 
     .about p {
-      font-s
+      font-size: 21px;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 55px 6%;
+      text-align: center;
+    }
+
+    footer .logo {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      opacity: 0.75;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+
+      .nav-links {
+        gap: 14px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 75px 6%;
+      }
+
+      .hero h1 {
+        letter-spacing: -4px;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      .tournament-card {
+        grid-template-columns: 1fr;
+      }
+
+      .tournament-image {
+        min-height: 300px;
+      }
+
+      .tournament-info {
+        padding: 30px;
+      }
+
+      .formats {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 36px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">MAD</div>
+
+```
+<div class="nav-links">
+  <a href="#tournaments">Tournaments</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>
+```
+
+  </nav>
+
+  <header class="hero">
+
+```
+<div class="eyebrow">Beach Sports • Boston</div>
+
+<h1>MAKE A<br>DAY.</h1>
+
+<p>
+  Beach volleyball tournaments, good people, and a little bit of chaos.
+</p>
+
+<a href="#tournaments" class="button">
+  SEE UPCOMING TOURNAMENTS ↓
+</a>
+```
+
+  </header>
+
+  <section class="featured" id="tournaments">
+
+```
+<div class="eyebrow">Next up</div>
+
+<h2 class="section-title">Spooky Season Jamboree 🎃</h2>
+
+<p class="section-intro">
+  Our final full day of tournaments at Revere Beach for the season.
+  Grab your long sleeves and bring your friends.
+</p>
+
+<div class="tournament-card">
+
+  <div class="tournament-image">
+
+    <div>
+      <div class="emoji">🏐🎃</div>
+
+      <h3>
+        SPOOKY<br>
+        SEASON<br>
+        JAMBOREE
+      </h3>
+    </div>
+
+  </div>
+
+  <div class="tournament-info">
+
+    <h3>Sunday, October 4</h3>
+
+    <div class="details">
+
+      <div class="detail">
+        <div class="detail-icon">📍</div>
+        <div>
+          <strong>Revere Beach</strong><br>
+          State Police Revere Barracks<br>
+          220 Revere Beach Blvd
+        </div>
+      </div>
+
+      <div class="detail">
+        <div class="detail-icon">⏰</div>
+        <div>
+          <strong>8:30 AM</strong><br>
+          Tournament runs approximately 9 AM–6 PM
+        </div>
+      </div>
+
+      <div class="detail">
+        <div class="detail-icon">💵</div>
+        <div>
+          <strong>$20 suggested</strong><br>
+          Kept as low as possible to cover tournament costs
+        </div>
+      </div>
+
+      <div class="detail">
+        <div class="detail-icon">🚇</div>
+        <div>
+          Wonderland T stop + street parking
+        </div>
+      </div>
+
+    </div>
+
+    <p>
+      2s tournament in the morning, 4s tournament in the afternoon,
+      plus some miscellaneous beach games and the best vibes.
+    </p>
+
+    <a
+      href="https://partiful.com/"
+      class="register-button"
+      target="_blank"
+    >
+      RSVP / REGISTER →
+    </a>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <section>
+
+```
+<div class="eyebrow">What's happening</div>
+
+<h2 class="section-title">Two tournaments. One beach day.</h2>
+
+<div class="formats">
+
+  <div class="format-card">
+
+    <div class="icon">🏐</div>
+
+    <h3>2s Tournament</h3>
+
+    <p>
+      9:00 AM–1:30 PM<br><br>
+      RCO 2s tournament bracket. Teams with 2M, 1M1F,
+      or 2F are welcome. By-the-book beach rules,
+      but friendly.
+    </p>
+
+  </div>
+
+  <div class="format-card">
+
+    <div class="icon">🌴</div>
+
+    <h3>4s Tournament</h3>
+
+    <p>
+      1:30 PM–6:00 PM<br><br>
+      Miscellaneous beach games with the best vibes.
+      Modified 4s rules with the server in the back row.
+    </p>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <section id="about">
+
+```
+<div class="about">
+
+  <div class="eyebrow">About MAD</div>
+
+  <h2 class="section-title">Make A Day.</h2>
+
+  <p>
+    MAD Beach Sports is a community-run beach sports series
+    built around good games, good people, and making a day of it.
+  </p>
+
+  <br>
+
+  <p>
+    Come play. Bring your friends. Stay for the chaos.
+  </p>
+
+</div>
+```
+
+  </section>
+
+  <footer id="contact">
+
+```
+<div class="logo">MAD</div>
+
+<p>
+  Beach sports around Boston • Make A Day
+</p>
+```
+
+  </footer>
+
+</body>
+</html>
