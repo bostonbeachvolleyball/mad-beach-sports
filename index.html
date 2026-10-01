@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MAD Beach Volleyball</title>
+  <title>Emma's MAD Beach</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,9 +67,7 @@
       text-decoration: none;
     }
 
-    /* ------------------------------
-       NAV
-    ------------------------------ */
+    /* NAV */
 
     .site-header {
       position: sticky;
@@ -104,14 +102,14 @@
 
     .brand-main {
       font-weight: 900;
-      letter-spacing: 0.03em;
-      font-size: 1.18rem;
+      letter-spacing: 0.01em;
+      font-size: 1.15rem;
     }
 
     .brand-sub {
       font-weight: 400;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       margin-top: 5px;
       color: var(--muted);
@@ -155,9 +153,7 @@
       color: var(--white);
     }
 
-    /* ------------------------------
-       PAGE SYSTEM
-    ------------------------------ */
+    /* PAGE SYSTEM */
 
     .page {
       display: none;
@@ -212,29 +208,19 @@
       letter-spacing: -0.04em;
     }
 
-    .section-intro {
-      max-width: 690px;
-      color: var(--muted);
-      font-size: 1.07rem;
-      margin-top: 18px;
-    }
-
-    /* ------------------------------
-       HOME HERO
-    ------------------------------ */
+    /* HERO */
 
     .hero {
       min-height: calc(100vh - 78px);
-      display: flex;
-      align-items: stretch;
       position: relative;
       overflow: hidden;
+
       background:
         linear-gradient(
-          90deg,
-          rgba(24, 63, 66, 0.86) 0%,
-          rgba(24, 63, 66, 0.68) 44%,
-          rgba(24, 63, 66, 0.20) 100%
+          to bottom,
+          rgba(24, 63, 66, 0.20) 0%,
+          rgba(24, 63, 66, 0.08) 45%,
+          rgba(24, 63, 66, 0.24) 100%
         ),
         url("photos/hero-1.jpg") center / cover no-repeat,
         var(--deep-teal);
@@ -244,7 +230,7 @@
       content: "";
       position: absolute;
       inset: auto 0 0 0;
-      height: 180px;
+      height: 145px;
       background: linear-gradient(
         to bottom,
         rgba(247, 243, 234, 0),
@@ -259,42 +245,47 @@
       width: 100%;
       max-width: 1180px;
       margin: 0 auto;
-      padding: 90px 28px 150px;
+      padding: 48px 28px 160px;
       display: flex;
-      align-items: center;
+      justify-content: center;
+      align-items: flex-start;
     }
 
     .hero-copy {
-      max-width: 720px;
+      max-width: 680px;
+      text-align: center;
       color: var(--white);
+      margin-top: 18px;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.28);
     }
 
     .hero-kicker {
       text-transform: uppercase;
-      letter-spacing: 0.19em;
+      letter-spacing: 0.18em;
       font-weight: 900;
-      font-size: 0.78rem;
-      margin-bottom: 20px;
-      opacity: 0.86;
+      font-size: 0.72rem;
+      margin-bottom: 12px;
+      color: rgba(255,255,255,0.92);
     }
 
     .hero h1 {
-      font-size: clamp(4rem, 11vw, 8.2rem);
-      letter-spacing: -0.07em;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      letter-spacing: -0.05em;
       font-weight: 900;
-      margin-left: -5px;
+      margin: 0;
     }
 
     .hero-description {
-      max-width: 660px;
-      font-size: clamp(1.05rem, 2vw, 1.28rem);
-      margin-top: 24px;
-      color: rgba(255,255,255,0.91);
+      max-width: 590px;
+      margin: 16px auto 0;
+      font-size: clamp(1rem, 2vw, 1.16rem);
+      color: rgba(255,255,255,0.94);
     }
 
     .hero-actions {
-      margin-top: 34px;
+      margin-top: 24px;
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 12px;
     }
@@ -323,7 +314,7 @@
     }
 
     .button-light {
-      background: rgba(255,255,255,0.94);
+      background: rgba(255,255,255,0.95);
       color: var(--deep-teal);
     }
 
@@ -343,9 +334,7 @@
       color: white;
     }
 
-    /* ------------------------------
-       HOME CONTENT
-    ------------------------------ */
+    /* HOME INTRO */
 
     .home-intro {
       margin-top: -80px;
@@ -396,9 +385,7 @@
       font-size: 0.92rem;
     }
 
-    /* ------------------------------
-       FEATURED EVENT
-    ------------------------------ */
+    /* FEATURED EVENT */
 
     .featured-event {
       display: grid;
@@ -461,9 +448,7 @@
       font-size: 1.08rem;
     }
 
-    /* ------------------------------
-       GENERAL PAGE HEADER
-    ------------------------------ */
+    /* PAGE HEADERS */
 
     .page-header {
       background: var(--seafoam);
@@ -473,7 +458,7 @@
     }
 
     .page-header h1 {
-      font-size: clamp(3rem, 8vw, 6.6rem);
+      font-size: clamp(3rem, 8vw, 6.2rem);
       letter-spacing: -0.06em;
     }
 
@@ -484,9 +469,7 @@
       font-size: 1.08rem;
     }
 
-    /* ------------------------------
-       TOURNAMENT CARDS
-    ------------------------------ */
+    /* TOURNAMENTS */
 
     .event-grid {
       display: grid;
@@ -543,9 +526,7 @@
       margin-top: 22px;
     }
 
-    /* ------------------------------
-       CHAMPIONS
-    ------------------------------ */
+    /* CHAMPIONS */
 
     .champion-grid {
       display: grid;
@@ -563,8 +544,7 @@
 
     .champion-photo {
       aspect-ratio: 4 / 3;
-      background:
-        linear-gradient(135deg, var(--sage), var(--sand));
+      background: linear-gradient(135deg, var(--sage), var(--sand));
     }
 
     .champion-content {
@@ -590,9 +570,7 @@
       font-size: 0.94rem;
     }
 
-    /* ------------------------------
-       RULES
-    ------------------------------ */
+    /* RULES */
 
     .rules-layout {
       display: grid;
@@ -640,9 +618,7 @@
       color: var(--muted);
     }
 
-    /* ------------------------------
-       ABOUT
-    ------------------------------ */
+    /* ABOUT */
 
     .about-grid {
       display: grid;
@@ -669,9 +645,7 @@
       font-size: 1.05rem;
     }
 
-    /* ------------------------------
-       CONTACT
-    ------------------------------ */
+    /* CONTACT */
 
     .contact-wrap {
       display: grid;
@@ -703,9 +677,7 @@
       border-bottom: 2px solid var(--orange);
     }
 
-    /* ------------------------------
-       FUTURE ACCOUNT PREVIEW
-    ------------------------------ */
+    /* FUTURE FEATURES */
 
     .future-box {
       margin-top: 50px;
@@ -739,9 +711,7 @@
       color: rgba(255,255,255,0.88);
     }
 
-    /* ------------------------------
-       FOOTER
-    ------------------------------ */
+    /* FOOTER */
 
     footer {
       background: var(--deep-teal);
@@ -765,9 +735,7 @@
       font-weight: 900;
     }
 
-    /* ------------------------------
-       MOBILE
-    ------------------------------ */
+    /* MOBILE */
 
     .mobile-menu-button {
       display: none;
@@ -854,7 +822,7 @@
       }
 
       .brand-main {
-        font-size: 1rem;
+        font-size: 0.98rem;
       }
 
       .values,
@@ -864,7 +832,7 @@
       }
 
       .hero h1 {
-        font-size: clamp(3.6rem, 22vw, 6rem);
+        font-size: clamp(2.7rem, 15vw, 4rem);
       }
 
       .hero-actions,
@@ -886,16 +854,12 @@
 
 <body>
 
-  <!-- ==============================
-       HEADER
-  =============================== -->
-
   <header class="site-header">
     <nav class="nav">
 
       <button class="brand" onclick="showPage('home')">
-        <span class="brand-main">MAD Beach Volleyball</span>
-        <span class="brand-sub">Make A Day</span>
+        <span class="brand-main">Emma’s MAD Beach</span>
+        <span class="brand-sub">Beach Volleyball · Make A Day</span>
       </button>
 
       <button
@@ -941,9 +905,7 @@
   </header>
 
 
-  <!-- ==============================
-       HOME
-  =============================== -->
+  <!-- HOME -->
 
   <main id="home" class="page active">
 
@@ -957,12 +919,11 @@
             Beach volleyball around Boston
           </div>
 
-          <h1>MAKE<br>A DAY.</h1>
+          <h1>Emma’s MAD Beach</h1>
 
           <p class="hero-description">
             Community-built beach volleyball tournaments with good competition,
-            plenty of playing time, changing formats, and a reason to spend the
-            whole day in the sand.
+            changing formats, and a reason to make a day of it.
           </p>
 
           <div class="hero-actions">
@@ -978,7 +939,7 @@
               class="button button-light"
               onclick="showPage('about')"
             >
-              What is MAD?
+              About
             </button>
 
           </div>
@@ -1002,7 +963,7 @@
           </h2>
 
           <p>
-            MAD tournaments are built around good volleyball and a great day at
+            Emma’s MAD Beach is built around good volleyball and a great day at
             the beach. Some events are social, some are highly competitive, and
             plenty land somewhere in between.
           </p>
@@ -1109,9 +1070,7 @@
   </main>
 
 
-  <!-- ==============================
-       TOURNAMENTS
-  =============================== -->
+  <!-- TOURNAMENTS -->
 
   <main id="tournaments" class="page">
 
@@ -1211,12 +1170,12 @@
 
         <div class="future-box">
 
-          <h3>Eventually, this becomes your tournament home base.</h3>
+          <h3>Your tournament home base.</h3>
 
           <p>
-            Each event will have its own private page for registered players,
-            so all of the information that currently gets scattered across forms,
-            messages, and event pages can live together.
+            Eventually each event will have its own private page for registered
+            players, with everything in one place instead of scattered across
+            forms and messages.
           </p>
 
           <div class="future-features">
@@ -1255,9 +1214,7 @@
   </main>
 
 
-  <!-- ==============================
-       CHAMPIONS
-  =============================== -->
+  <!-- CHAMPIONS -->
 
   <main id="champions" class="page">
 
@@ -1300,7 +1257,7 @@
               <div class="champion-date">Coming soon</div>
               <h3>Past results</h3>
               <p>
-                Eventually you’ll be able to look back through previous events.
+                Look back through previous tournaments and finishes.
               </p>
             </div>
           </article>
@@ -1312,7 +1269,7 @@
               <div class="champion-date">Coming soon</div>
               <h3>Player history</h3>
               <p>
-                Tournament participation and finishes will connect to player profiles.
+                Tournament participation and finishes will eventually connect to player profiles.
               </p>
             </div>
           </article>
@@ -1325,9 +1282,7 @@
   </main>
 
 
-  <!-- ==============================
-       RULES
-  =============================== -->
+  <!-- RULES -->
 
   <main id="rules" class="page">
 
@@ -1339,7 +1294,7 @@
         <h1>Rules</h1>
 
         <p>
-          The goal is competitive volleyball without taking ourselves too seriously.
+          Competitive volleyball without taking ourselves too seriously.
           Event-specific rules will always be shared before play starts.
         </p>
 
@@ -1383,11 +1338,11 @@
             </div>
 
             <div class="rule">
-              <h3>Formats may vary</h3>
+              <h3>Formats may shift</h3>
               <p>
-                Tournament structure may change a little depending on registration,
-                weather, beach conditions, or what makes the most sense for the event.
-                If anything changes, we’ll keep everyone updated.
+                Tournament structure, timing, or date may need to change depending
+                on registration, weather, beach conditions, or other unexpected
+                circumstances. If anything changes, we’ll keep everyone updated.
               </p>
             </div>
 
@@ -1396,7 +1351,7 @@
               <p>
                 Free agents are welcome to share preferred partners or general
                 teammate preferences. We’ll do our best to accommodate requests,
-                but final pairings are made based on what works best for the tournament.
+                but final pairings depend on what works best for the tournament.
               </p>
             </div>
 
@@ -1418,16 +1373,14 @@
   </main>
 
 
-  <!-- ==============================
-       ABOUT
-  =============================== -->
+  <!-- ABOUT -->
 
   <main id="about" class="page">
 
     <section class="page-header">
       <div class="container">
 
-        <div class="eyebrow">About MAD</div>
+        <div class="eyebrow">About Emma's MAD Beach</div>
 
         <h1>Make A Day.</h1>
 
@@ -1454,9 +1407,9 @@
             <h2>More than showing up for one match.</h2>
 
             <p>
-              MAD is about making a day out of beach volleyball — good games,
-              different people, new formats, and enough playing time that the
-              tournament actually feels worth showing up for.
+              Emma’s MAD Beach is about making a day out of beach volleyball —
+              good games, different people, new formats, and enough playing time
+              that the tournament actually feels worth showing up for.
             </p>
 
             <p>
@@ -1479,9 +1432,7 @@
   </main>
 
 
-  <!-- ==============================
-       CONTACT
-  =============================== -->
+  <!-- CONTACT -->
 
   <main id="contact" class="page">
 
@@ -1545,16 +1496,14 @@
   </main>
 
 
-  <!-- ==============================
-       FOOTER
-  =============================== -->
+  <!-- FOOTER -->
 
   <footer>
 
     <div class="footer-inner">
 
       <div>
-        <span class="footer-brand">MAD Beach Volleyball</span>
+        <span class="footer-brand">Emma’s MAD Beach</span>
         &nbsp; · &nbsp; Make A Day
       </div>
 
@@ -1566,10 +1515,6 @@
 
   </footer>
 
-
-  <!-- ==============================
-       JAVASCRIPT
-  =============================== -->
 
   <script>
 
@@ -1613,7 +1558,7 @@
 
     function showComingSoon() {
       alert(
-        "This part is coming next — player accounts, registration, team invites, and private event pages."
+        "Coming soon — player accounts, registration, team invites, and private event pages."
       );
     }
 
